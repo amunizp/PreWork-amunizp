@@ -32,14 +32,12 @@ def esPrimo(n):
     
   elif n== 1 or n == 2 :
     print("1 ,2 y 3 son primos, ni me molesto en comprobar")
-  elif n==4:
-    print("4 no es primo, (esto es una trampa que hice porque no consegui hacier funcionar la lógica para este número)")
   else:
     i=2
     sqn = n **0.5
     print ("comprobamos si es divisible  desde 2 hasta la raiz cuadrada de ", n, " que es ", sqn)
     #https://en.wikipedia.org/wiki/Primality_test
-    while i <sqn:
+    while i <=sqn:
       if n % i == 0:
         print("este número no es primo: ", n)
         break
@@ -47,17 +45,18 @@ def esPrimo(n):
         print("voy a probar el siguiente ya que no es divisible por", i)
         
       i +=1
-      if i >= sqn :
+      if i > sqn :
         print("es primo: ", n)
 print ("comprobar si es primo")
-esPrimo(79)
-esPrimo(80)
-esPrimo(4)
-esPrimo(5)
-esPrimo(6)
-esPrimo(8)
-esPrimo(0)
-esPrimo(0.1)
+print(esPrimo(79)  )
+print(esPrimo(80)  )
+print(esPrimo(4)) 
+print(esPrimo(5)) 
+print(esPrimo(6))
+print(esPrimo(8))
+print(esPrimo(0)  )
+print(esPrimo(0.1  ))
+print(esPrimo(9  ))
 
 def suma_de_lista(lista_numeros):
   total=0
